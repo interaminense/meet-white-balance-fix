@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Meet White Balance Fix",
+  "version": "2.0",
+  "description": "Fixes webcam color in Google Meet with software RGB adjustment (WebGL) and presets.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WB-fix"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["engine.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start",
+      "world": "ISOLATED",
+      "all_frames": true
+    }
+  ]
+}

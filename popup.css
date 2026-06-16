@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+
+body {
+  width: 260px;
+  margin: 0;
+  padding: 12px;
+  font: 13px/1.4 system-ui, sans-serif;
+  background: #1f1f23;
+  color: #e8e8ea;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.title { font-weight: 600; font-size: 14px; }
+
+.switch { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; user-select: none; }
+.switch input { accent-color: #5b8cff; }
+
+.row { display: flex; gap: 6px; margin-bottom: 12px; }
+.row select { flex: 1; }
+
+select, button {
+  background: #2b2b31;
+  color: #e8e8ea;
+  border: 1px solid #3a3a42;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+button:hover, select:hover { border-color: #5b8cff; }
+
+.slider {
+  display: grid;
+  grid-template-columns: 78px 1fr 42px;
+  align-items: center;
+  gap: 8px;
+  margin: 7px 0;
+}
+.slider label { color: #b9b9c2; }
+.slider .val { text-align: right; font-variant-numeric: tabular-nums; color: #9fb4ff; }
+.slider input[type="range"] { width: 100%; accent-color: #5b8cff; }
+
+.actions { display: flex; gap: 6px; margin-top: 12px; }
+.actions button { flex: 1; }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span class="title">🎨 WB-fix</span>
+    <label class="switch">
+      <input type="checkbox" id="enabled">
+      <span>on</span>
+    </label>
+  </header>
+
+  <div class="row">
+    <select id="preset" title="Presets"></select>
+    <button id="delPreset" title="Delete the selected preset (your own only)">🗑</button>
+  </div>
+
+  <div id="sliders"></div>
+
+  <div class="actions">
+    <button id="save">Save preset</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
